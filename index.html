@@ -28,7 +28,7 @@
     <link rel="canonical" href="https://poluna-client.github.io/">
     
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="meteor-container">
@@ -140,19 +140,17 @@
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h3>Старт</h3>
+                        <h3>30 дней</h3>
                         <div class="price">
-                            <span class="currency">₽</span>
-                            <span class="amount">299</span>
-                            <span class="period">/ месяц</span>
+                            <span class="amount">200</span>
+                            <span class="currency">Rub</span>
                         </div>
                     </div>
                     <ul class="pricing-features">
-                        <li><span class="check">✓</span> Базовые модули</li>
+                        <li><span class="check">✓</span> Все модули</li>
                         <li><span class="check">✓</span> Discord поддержка</li>
                         <li><span class="check">✓</span> Обновления</li>
-                        <li class="disabled"><span class="cross">✗</span> Premium обход</li>
-                        <li class="disabled"><span class="cross">✗</span> VIP чат</li>
+                        <li><span class="check">✓</span> Premium обход</li>
                     </ul>
                     <button class="btn btn-full btn-outline" onclick="openModal('purchase')">Выбрать</button>
                 </div>
@@ -160,11 +158,10 @@
                 <div class="pricing-card featured">
                     <div class="badge">Популярный</div>
                     <div class="pricing-header">
-                        <h3>Premium</h3>
+                        <h3>90 дней</h3>
                         <div class="price">
-                            <span class="currency">₽</span>
-                            <span class="amount">599</span>
-                            <span class="period">/ месяц</span>
+                            <span class="amount">450</span>
+                            <span class="currency">Rub</span>
                         </div>
                     </div>
                     <ul class="pricing-features">
@@ -181,9 +178,8 @@
                     <div class="pricing-header">
                         <h3>Навсегда</h3>
                         <div class="price">
-                            <span class="currency">₽</span>
-                            <span class="amount">2999</span>
-                            <span class="period">навсегда</span>
+                            <span class="amount">600</span>
+                            <span class="currency">Rub</span>
                         </div>
                     </div>
                     <ul class="pricing-features">
@@ -313,17 +309,17 @@
             <span class="close" onclick="closeModal('purchase')">&times;</span>
             <h2>Покупка</h2>
             <div class="purchase-options">
-                <div class="purchase-option" onclick="selectPlan(this, 'start')">
-                    <h4>Старт</h4>
-                    <p class="purchase-price">₽299/мес</p>
+                <div class="purchase-option" onclick="selectPlan(this, '30days')">
+                    <h4>30 дней</h4>
+                    <p class="purchase-price">200 Rub</p>
                 </div>
-                <div class="purchase-option selected" onclick="selectPlan(this, 'premium')">
-                    <h4>Premium</h4>
-                    <p class="purchase-price">₽599/мес</p>
+                <div class="purchase-option selected" onclick="selectPlan(this, '90days')">
+                    <h4>90 дней</h4>
+                    <p class="purchase-price">450 Rub</p>
                 </div>
                 <div class="purchase-option" onclick="selectPlan(this, 'lifetime')">
                     <h4>Навсегда</h4>
-                    <p class="purchase-price">₽2999</p>
+                    <p class="purchase-price">600 Rub</p>
                 </div>
             </div>
             <form onsubmit="handlePurchase(event)">
