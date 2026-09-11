@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://poluna-client.github.io/sitemap.xml
