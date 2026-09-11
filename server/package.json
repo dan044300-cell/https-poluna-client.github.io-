@@ -1,0 +1,13 @@
+{
+  "name": "poluna-server",
+  "version": "1.0.0",
+  "description": "Poluna Client API: регистрация, покупка ключей, проверка входа в лаунчер, админ-панель",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}

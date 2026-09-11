@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poluna Client | Скачать Poluna</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Poluna Client - Minecraft клиент с KillAura, ESP, Speed и Bypass. Современный и стабильный. Скачать Poluna.">
+    <meta name="keywords" content="Poluna, Poluna Client, Minecraft клиент, KillAura, ESP, Speed, Bypass">
+    <meta name="author" content="Poluna">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://poluna-client.github.io/">
+    <meta property="og:title" content="Poluna Client - Minecraft клиент">
+    <meta property="og:description" content="Poluna Client. Премиум Minecraft клиент с KillAura, ESP, Speed и Bypass.">
+    <meta property="og:image" content="https://poluna-client.github.io/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://poluna-client.github.io/">
+    <meta property="twitter:title" content="Poluna Client - Minecraft клиент">
+    <meta property="twitter:description" content="Poluna Client. Премиум Minecraft клиент.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://poluna-client.github.io/">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="space-bg">
+        <div class="nebula nb-1"></div>
+        <div class="nebula nb-2"></div>
+        <div class="nebula nb-3"></div>
+        <div id="starsFar" class="stars stars-far"></div>
+        <div id="starsMid" class="stars stars-mid"></div>
+        <div id="starsNear" class="stars stars-near"></div>
+        <div class="shooting-star ss-1"></div>
+        <div class="shooting-star ss-2"></div>
+        <div class="shooting-star ss-3"></div>
+        <div class="space-vignette"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-text">POLUNA</span>
+        </div>
+        <div class="nav-links">
+            <a href="#planets">Планеты</a>
+            <a href="#features">Возможности</a>
+            <a href="#pricing">Цены</a>
+            <a href="#faq">FAQ</a>
+        </div>
+        <div class="nav-buttons" id="authArea">
+            <button class="btn btn-outline" onclick="openModal('login')">Войти</button>
+            <button class="btn btn-primary" onclick="openModal('register')">Регистрация</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-space">
+            <img class="hero-planet hp-earth" src="img/planets/earth.jpg" alt="Земля">
+            <img class="hero-planet hp-moon" src="img/planets/moon.jpg" alt="Луна">
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-white">POLUNA</span>
+            </h1>
+            <p class="hero-subtitle">Даже в самом тихом месте космоса, мы останемся сильнейшими</p>
+            <div class="hero-buttons">
+                <button class="btn btn-large btn-primary" onclick="openModal('purchase')">
+                    <span>Купить</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+</button>
+                <button class="btn btn-large btn-outline" onclick="scrollToFeatures()">Функции</button>
+            </div>
+
+            <a href="#planets" class="hero-hint">
+                <span>Обзор системы</span>
+                <span class="hint-arrow">↓</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="planets" class="planets">
+        <div class="container">
+            <h2 class="section-title">Система Poluna</h2>
+            <p class="section-subtitle">Один из лучший платных читов 1.21.11 созданный:sadsadasd00362</p>
+            <div class="planet-scroller">
+                <button class="scroller-btn" onclick="scrollPlanets(-1)" aria-label="Назад">←</button>
+                <div class="planet-track" id="planetTrack">
+                    <div class="planet-card">
+                        <div class="planet-photo">
+                            <img src="img/planets/earth.jpg" alt="Земля" loading="lazy">
+                        </div>
+                        <h3>Земля</h3>
+                        <p>Домашняя орбита Poluna. Разведка и контроль территории Freecam-системой.</p>
+                    </div>
+                    <div class="planet-card">
+                        <div class="planet-photo">
+                            <img src="img/planets/moon.jpg" alt="Луна" loading="lazy">
+                        </div>
+                        <h3>Луна</h3>
+                        <p>Спутник Poluna. Маяк наблюдения — Bypass-сигнал держится даже в тени.</p>
+                    </div>
+                </div>
+                <button class="scroller-btn" onclick="scrollPlanets(1)" aria-label="Вперёд">→</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Арсенал Poluna</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>KillAura</h3>
+                    <p>Точные удары по целям, как бросок Шкиппера</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M3 9h18M9 21V9"/>
+                        </svg>
+                    </div>
+                    <h3>ESP</h3>
+                    <p>Видишь каждого врага, как Ковальски свои расчёты</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h3>Speed</h3>
+                    <p>Рвёшься вперёд быстрее, чем Рико к еде</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Bypass</h3>
+                    <p>Пробираемся мимо античитов, как пингвины в зоопарк</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                        </svg>
+                    </div>
+                    <h3>Freecam</h3>
+                    <p>Разведка с воздуха, как барражирование Прапора</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </svg>
+                    </div>
+                    <h3>Config System</h3>
+                    <p>Конфигурации сохраняются точнее, чем отчёты Ковальски</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Подписка</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>30 дней</h3>
+                        <div class="price">
+                            <span class="amount">200</span>
+                            <span class="currency">Rub</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Все модули</li>
+                        <li><span class="check">✓</span> Discord поддержка</li>
+                        <li><span class="check">✓</span> Обновления</li>
+                        <li><span class="check">✓</span> Premium обход</li>
+                    </ul>
+                    <button class="btn btn-full btn-outline" onclick="openModal('purchase')">Выбрать</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>90 дней</h3>
+                        <div class="price">
+                            <span class="amount">450</span>
+                            <span class="currency">Rub</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Все модули</li>
+                        <li><span class="check">✓</span> Приоритетная поддержка</li>
+                        <li><span class="check">✓</span> Обновления</li>
+                        <li><span class="check">✓</span> Premium обход</li>
+                        <li><span class="check">✓</span> VIP чат</li>
+                    </ul>
+                    <button class="btn btn-full btn-primary" onclick="openModal('purchase')">Выбрать</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Навсегда</h3>
+                        <div class="price">
+                            <span class="amount">600</span>
+                            <span class="currency">Rub</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Все модули</li>
+                        <li><span class="check">✓</span> VIP поддержка</li>
+                        <li><span class="check">✓</span> Пожизненные обновления</li>
+                        <li><span class="check">✓</span> Premium обход</li>
+                        <li><span class="check">✓</span> Закрытый чат</li>
+                    </ul>
+                    <button class="btn btn-full btn-outline" onclick="openModal('purchase')">Выбрать</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Частые вопросы</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Безопасно ли использовать Poluna?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Мы маскируемся лучше, чем Шкиппер в аэропорту. Однако всегда есть риск бана при использовании любого чита.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Какие версии Minecraft поддерживаются?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Поддерживаются версии 1.16.5 - 1.21.x с Fabric Loader.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Как получить доступ после покупки?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Операция «Покупка» завершена — доступ придёт на email с инструкциями по установке.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">POLUNA</span>
+                    <p>Обновления и миссии — в Discord</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://discord.gg/H3UPkFtK6" target="_blank" rel="noopener">Discord</a>
+                    <span class="footer-link-soon" title="Пока недоступно">Telegram — скоро</span>
+                    <span class="footer-link-soon" title="Пока недоступно">YouTube — скоро</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Poluna. Все права защищены. Как левое крыло, так и правое.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('login')">&times;</span>
+            <h2>Вход</h2>
+            <form onsubmit="handleLogin(event)" autocomplete="on">
+                <div class="honeypot" aria-hidden="true">
+                    <input type="text" id="hpLogin" tabindex="-1" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Email (только Gmail)</label>
+                    <input type="email" id="loginEmail" placeholder="you@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Пароль</label>
+                    <input type="password" id="loginPass" placeholder="••••••••" required>
+                </div>
+                <p class="form-error" id="loginError"></p>
+                <button type="submit" class="btn btn-full btn-primary">Войти</button>
+                <button type="button" class="btn btn-full btn-github" onclick="openGithub()">
+                    <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    Войти через GitHub
+                </button>
+            </form>
+            <p class="modal-footer-text">Нет аккаунта? <a href="#" onclick="switchModal('login', 'register')">Зарегистрироваться</a> · <a href="#" onclick="switchModal('login', 'reset')">Забыли пароль?</a></p>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('register')">&times;</span>
+            <h2>Регистрация</h2>
+            <form onsubmit="handleRegister(event)" autocomplete="off">
+                <div class="honeypot" aria-hidden="true">
+                    <input type="text" id="hpReg" tabindex="-1" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Ник</label>
+                    <input type="text" id="regNick" placeholder="ВашНик" maxlength="24" required>
+                </div>
+                <div class="form-group">
+                    <label>Email (только Gmail)</label>
+                    <input type="email" id="regEmail" placeholder="you@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Пароль (мин. 8 символов, буквы и цифры)</label>
+                    <input type="password" id="regPass" placeholder="••••••••" required>
+                </div>
+                <div class="form-group">
+                    <label>Подтвердите пароль</label>
+                    <input type="password" id="regPass2" placeholder="••••••••" required>
+                </div>
+                <div class="captcha-box">
+                    <span id="regCaptchaQ"></span>
+                    <input type="text" id="regCaptcha" placeholder="Ответ" inputmode="numeric" required>
+                </div>
+                <p class="form-error" id="registerError"></p>
+                <button type="submit" class="btn btn-full btn-primary">Создать аккаунт</button>
+                <button type="button" class="btn btn-full btn-github" onclick="openGithub()">
+                    <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    Зарегистрироваться через GitHub
+                </button>
+            </form>
+            <p class="modal-footer-text">Уже есть аккаунт? <a href="#" onclick="switchModal('register', 'login')">Войти</a></p>
+        </div>
+    </div>
+
+    <!-- GitHub Auth Modal (demo) -->
+    <div id="githubModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('github')">&times;</span>
+            <h2>GitHub-аккаунт</h2>
+            <p class="github-note">Демо: полный GitHub OAuth требует сервер. Здесь GitHub-код сохраняется, а аккаунт создаётся локально.</p>
+            <div class="github-code-info" id="githubCodeBox" style="display:none">
+                GitHub-код авторизации сохранён: <b id="githubCodeSpan"></b>
+            </div>
+            <form onsubmit="handleGithubRegister(event)">
+                <div class="form-group">
+                    <label>Ник (3–24 символа)</label>
+                    <input type="text" id="ghNick" placeholder="GitHubНик" maxlength="24" required>
+                </div>
+                <div class="form-group">
+                    <label>Email (только Gmail)</label>
+                    <input type="email" id="ghEmail" placeholder="you@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Пароль (мин. 8, буквы и цифры)</label>
+                    <input type="password" id="ghPass" placeholder="••••••••" required>
+                </div>
+                <div class="form-group">
+                    <label>Повторите пароль</label>
+                    <input type="password" id="ghPass2" placeholder="••••••••" required>
+                </div>
+                <div class="form-group">
+                    <label>Ссылка на GitHub-профиль (необязательно)</label>
+                    <input type="text" id="ghProfile" placeholder="https://github.com/ник">
+                </div>
+                <p class="form-error" id="githubError"></p>
+                <button type="submit" class="btn btn-full btn-github">Создать аккаунт через GitHub</button>
+            </form>
+            <p class="modal-footer-text">Уже создавал через GitHub? <a href="#" onclick="handleGithubLogin()">Войти</a> · Лучше <a href="#" onclick="switchModal('github', 'login')">обычный вход</a></p>
+        </div>
+    </div>
+
+    <!-- Purchase Modal -->
+    <div id="purchaseModal" class="modal">
+        <div class="modal-content modal-purchase">
+            <span class="close" onclick="closeModal('purchase')">&times;</span>
+            <div class="purchase-head">
+                <span class="purchase-orb"></span>
+                <h2 class="purchase-title">Оформление подписки</h2>
+                <p class="purchase-sub">Выбери свой план — доступ активируется сразу</p>
+            </div>
+            <div class="purchase-options">
+                <div class="purchase-option" data-plan="30days" onclick="selectPlan(this, '30days')">
+                    <span class="plan-ribbon">Попробовать</span>
+                    <h4 class="plan-name">30 дней</h4>
+                    <p class="purchase-price"><span class="price-big">200</span> Rub</p>
+                </div>
+                <div class="purchase-option selected" data-plan="90days" onclick="selectPlan(this, '90days')">
+                    <span class="plan-ribbon hot">Хит</span>
+                    <h4 class="plan-name">90 дней</h4>
+                    <p class="purchase-price"><span class="price-big">450</span> Rub</p>
+                </div>
+                <div class="purchase-option" data-plan="lifetime" onclick="selectPlan(this, 'lifetime')">
+                    <span class="plan-ribbon gold">Максимум</span>
+                    <h4 class="plan-name">Навсегда</h4>
+                    <p class="purchase-price"><span class="price-big">600</span> Rub</p>
+                </div>
+            </div>
+            <div class="pay-methods">
+                <p class="pay-title">Способ оплаты</p>
+                <div class="pay-grid">
+                    <div class="pay-method selected" data-pay="card" onclick="selectPayment(this, 'card')"><span class="pay-name">Банковская карта</span></div>
+                    <div class="pay-method" data-pay="sbp" onclick="selectPayment(this, 'sbp')"><span class="pay-name">СБП</span></div>
+                </div>
+                <p class="pay-note">Демо: платёж не списывается, подписка активируется сразу.</p>
+            </div>
+            <form onsubmit="handlePurchase(event)">
+                <div class="form-group">
+                    <label>Email для получения доступа</label>
+                    <input type="email" placeholder="your@email.com" required>
+                </div>
+                <button type="submit" class="btn btn-full btn-primary">Оплатить</button>
+            </form>
+            <div class="purchase-result" id="purchaseResult"></div>
+            <p class="modal-footer-text">Уже есть аккаунт? <a href="#" onclick="switchModal('purchase', 'login')">Войти</a></p>
+        </div>
+    </div>
+
+    <!-- Profile Modal -->
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('profile')">&times;</span>
+            <h2>Профиль</h2>
+            <div class="profile-info">
+                <div class="profile-row"><span>Логин</span><b id="profileNick"></b></div>
+                <div class="profile-row"><span>Почта</span><b id="profileEmail"></b></div>
+                <div class="profile-row"><span>Пароль</span><b id="profilePass"></b></div>
+                <div class="profile-row"><span>Подписка</span><b id="profileSub"></b></div>
+                <div class="profile-row"><span>Ключ</span><b id="profileKey" class="profile-key"></b></div>
+            </div>
+            <p class="profile-hint">Пароль хранится только как SHA-256 хэш — показать исходный нельзя.</p>
+            <button type="button" class="btn btn-full btn-primary" onclick="downloadLauncher()">Скачать лаунчер</button>
+            <button type="button" class="btn btn-full btn-primary" onclick="switchModal('profile', 'purchase')">Купить подписку</button>
+            <button type="button" class="btn btn-full btn-outline" onclick="switchModal('profile', 'change')">Сменить пароль</button>
+            <button type="button" class="btn btn-full btn-outline" onclick="logout(); closeModal('profile');">Выйти из аккаунта</button>
+            <p class="modal-footer-text">Ключ выдаётся после оплаты.</p>
+        </div>
+    </div>
+
+    <!-- Change Password Modal -->
+    <div id="changeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('change')">&times;</span>
+            <h2>Смена пароля</h2>
+            <form onsubmit="handleChangePass(event)">
+                <div class="form-group">
+                    <label>Текущий пароль</label>
+                    <input type="password" id="changeCur" placeholder="••••••••" required>
+                </div>
+                <div class="form-group">
+                    <label>Новый пароль (мин. 8, буквы и цифры)</label>
+                    <input type="password" id="changePass" placeholder="••••••••" required>
+                </div>
+                <div class="form-group">
+                    <label>Повторите новый пароль</label>
+                    <input type="password" id="changePass2" placeholder="••••••••" required>
+                </div>
+                <p class="form-error" id="changeError"></p>
+                <button type="submit" class="btn btn-full btn-primary">Сохранить</button>
+            </form>
+            <p class="modal-footer-text"><a href="#" onclick="switchModal('change', 'profile')">&larr; Назад в профиль</a></p>
+        </div>
+    </div>
+
+    <!-- Reset Password Modal -->
+    <div id="resetModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('reset')">&times;</span>
+            <h2>Восстановление пароля</h2>
+            <form onsubmit="handleResetPass(event)">
+                <div class="form-group">
+                    <label>Email (только Gmail)</label>
+                    <input type="email" id="resetEmail" placeholder="you@gmail.com" required>
+                </div>
+                <button type="button" class="btn btn-full btn-outline" onclick="requestResetCode()">Получить код</button>
+                <div class="reset-code-box" id="resetCodeBox" style="display:none">
+                    <p class="reset-code-note">Демо: письмо не отправляется — код ниже показывает, что пришло бы на почту.</p>
+                    <div class="reset-code-display" id="resetCodeSpan"></div>
+                </div>
+                <div class="form-group">
+                    <label>Код из письма</label>
+                    <input type="text" id="resetCode" placeholder="6 цифр" inputmode="numeric" required>
+                </div>
+                <div class="form-group">
+                    <label>Новый пароль (мин. 8, буквы и цифры)</label>
+                    <input type="password" id="resetPass" placeholder="••••••••" required>
+                </div>
+                <div class="form-group">
+                    <label>Повторите новый пароль</label>
+                    <input type="password" id="resetPass2" placeholder="••••••••" required>
+                </div>
+                <p class="form-error" id="resetError"></p>
+                <button type="submit" class="btn btn-full btn-primary">Сбросить пароль</button>
+            </form>
+            <p class="modal-footer-text"><a href="#" onclick="switchModal('reset', 'login')">&larr; Вспомнил — войти</a></p>
+        </div>
+    </div>
+
+    <!-- Welcome Modal (cosmic design) -->
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content modal-cosmic">
+            <span class="close" onclick="closeModal('welcome')">&times;</span>
+            <div class="welcome-orb"></div>
+            <h2 class="welcome-title">Добро пожаловать<br>в Poluna</h2>
+            <p class="welcome-sub">Аккаунт создан. Это твои данные бортового журнала:</p>
+            <div class="welcome-card">
+                <div class="profile-row"><span>Логин</span><b id="welcomeNick"></b></div>
+                <div class="profile-row"><span>Почта</span><b id="welcomeEmail"></b></div>
+                <div class="profile-row"><span>Пароль</span><b id="welcomePass"></b></div>
+                <div class="profile-row"><span>Подписка</span><b id="welcomeSub"></b></div>
+                <div class="profile-row"><span>Ключ</span><b id="welcomeKey" class="profile-key"></b></div>
+            </div>
+            <p class="welcome-hint">Пароль виден один раз — дальше он хранится только как хэш.</p>
+            <div class="welcome-actions">
+                <button type="button" class="btn btn-full btn-primary" onclick="switchModal('welcome', 'purchase')">Купить подписку</button>
+                <button type="button" class="btn btn-full btn-outline" onclick="closeModal('welcome')">Отлично</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
